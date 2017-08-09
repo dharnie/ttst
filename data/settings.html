@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+	<link rel="stylesheet" type="text/css" href="../materialize/css/materialize.min.css">
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira|Saira+Extra+Condensed" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>TurTex</title>
+</head>
+<body>
+<div class="c_preloader">
+	<img src="../assets/img/logo.png" width="250px">
+</div>
+
+<nav>
+    <div class="nav-wrapper"><a href="" onclick="goBack()"><i class="fa fa-arrow-left"></i></a>
+	    <a href="#!" class="brand-logo right">
+	      Settings
+	    </a>
+	    <ul id="nav-mobile" class="left">
+	        <li></li>
+	    	<li><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-navicon"></i></a></li>
+	    </ul>
+    </div>
+	<ul id="slide-out" class="side-nav">
+	    <li><div class="user-view">
+	      <div class="background">
+	        <img src="../assets/img/5.jpg" width="100%" height="100%">
+	      </div>
+	      <a href="profile.html"><img class="circle" src="../assets/img/christian.jpg"></a>
+	      <a href="profile.html"><span class="white-text name"></span></a>
+	      <a href="profile.html"><span class="white-text email"></span></a>
+	    </div></li>
+	    <li><a href="settings.html"><i class="fa fa-cogs"></i> Settings</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="subheader"><i class="fa fa-history"></i> History</a></li>
+	    <li><a href="trips.html"><i class="fa fa-car"></i> Trip History</a></li>
+	    <li><a href="transactions.html"><i class="fa fa-money"></i> Transaction History</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="waves-effect" href="javascript:;" id="logout"><i class="fa fa-power-off"></i> Logout</a></li>
+	</ul>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<ul class="collection with-header">
+			<center>
+				<a href="#upPh" class="modal-trigger"><img class="circle" src="../assets/img/christian.jpg" width="100px"></a>
+			</center>
+	        <a class="waves-effect waves-light modal-trigger collection-item" href="#editP">Edit Profile</a>
+	        <a class="waves-effect waves-light modal-trigger collection-item" href="#trI">Transaction Information</a>
+	        <a class="waves-effect waves-light modal-trigger collection-item" href="#trip_s">Trip Status</a>
+	        <a class="waves-effect waves-light modal-trigger collection-item" href="#acct_s">Account Status</a>
+	     </ul>
+	</div>
+</div>
+
+<!-- Modal Structure -->
+<div id="upPh" class="modal modal-fixed-footer">
+	<div class="modal-content">
+		<h4>Change Photo</h4>
+		<form method="POST" id="formX" enctype="multipart/form-data">
+			<div class="file-field input-field">
+				<div class="btn">
+					<span>File</span>
+					<input type="file" name="userphoto" id="userphoto">
+				</div>
+				<div class="file-path-wrapper">
+					<input class="file-path validate" type="text">
+				</div>
+			</div>
+			<button class="btn waves-light" name="submit" id="upload">Upload</button>
+		</form>
+	</div>
+	<div class="modal-footer">
+    	<div class="ajaxloader"></div>
+    	<!-- <a href="javascript:;" class="waves-effect waves-green btn-flat">Upload</a> -->
+    	<a href="javascript:;" class="modal-action modal-close waves-effect waves-light btn">Cancel</a>
+    </div>
+</div>
+
+<!-- Modal Structure -->
+  <div id="editP" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Edit Profile</h4>
+      <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input id="first_name" type="text" class="validate">
+	          <label for="first_name">First Name</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="last_name" type="text" class="validate">
+	          <label for="last_name">Last Name</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="phn_number" type="number" class="validate">
+	          <label for="phn_number">Phone Number</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input id="nationality" type="text" class="validate">
+	          <label for="nationality">Nationality</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="sot" type="text" class="validate">
+	          <label for="sot">State Of Origin</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <textarea id="address" class="materialize-textarea validate"></textarea>
+	          <label for="address">House Address</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s6">
+			    <select id="gender">
+			      <option value="" disabled selected>Gender</option>
+			      <option value="Male">Male</option>
+			      <option value="Female">Female</option>
+			    </select>
+			    <label>Gender</label>
+			</div>
+	        <div class="input-field col s6">
+	          <input type="date" id="dob" class="datepicker">
+	          <label for="dob">Date Of Birth</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="password" type="password" class="validate">
+	          <label for="password">Enter Pasword to Confirm</label>
+	        </div>
+	      </div>
+	   </form>
+    </div>
+    <div class="modal-footer">
+    	<div class="ajaxloader"></div>
+    	<a href="javascript:;" class="waves-effect waves-green btn-flat" id="saveP">Save Changes</a>
+    	<a href="javascript:;" class="modal-action modal-close waves-effect waves-light btn">Cancel</a>
+    </div>
+  </div>
+  <!-- Modal Structure -->
+  <div id="trI" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Transaction Details</h4>
+      <form class="col s12">
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="no_on_card" type="number" class="validate">
+	          <label for="no_on_card">No. On Card</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="card_b" type="text" class="validate">
+	          <label for="card_b">Card Bearer</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="cvv" type="number" class="validate">
+	          <label for="cvv">CVV2</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s6">
+	          <input id="exp_month" type="number" class="validate">
+	          <label for="exp_month">Expiry Date - Month</label>
+	        </div>
+	        <div class="input-field col s6">
+	          <input id="exp_year" type="number" class="validate">
+	          <label for="exp_year">Expiry Date - Year</label>
+	        </div>
+	      </div>
+	      <div class="row">
+	        <div class="input-field col s12">
+	          <input id="password" type="password" class="validate">
+	          <label for="password">Enter Pasword to Confirm</label>
+	        </div>
+	      </div>
+	   </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Save</a>
+    </div>
+  </div>
+
+  <!--- Status Modal -->
+
+  <!-- Modal Structure -->
+  <div id="trip_s" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Trip Status</h4>
+      <p>You have no active trips</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Go Home</a>
+    </div>
+  </div>
+  <div id="acct_s" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Account Status</h4>
+      <p>Pending</p>
+      <small>You have an outstanding payment</small>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Okay</a>
+    </div>
+  </div>
+
+<script type="text/javascript" src="../cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="../assets/js/custom.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+<script type="text/javascript">
+	// $("#formX").on('submit', function(){
+ //        var formX = $(this);
+ //        console.log($(this).serialize())
+ //        var formXdata = new FormData(formX)
+ //        $.ajax({
+ //            url: "config/updatePhoto.php",
+ //            type: "POST",
+ //            data: formXdata,
+ //            cache: false,
+ //            processData: false,
+ //            contentType: false,
+ //            success: function(res) {
+ //                alert(res)
+ //            },
+ //            error: function(a,b,c) {
+ //                console.log(a)
+ //            }
+ //        })
+
+ //        return false
+ //    })
+</script>
+
+<script type="text/javascript">
+	// Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+  $(document).ready(function(){
+    $('ul.tabs').tabs()
+  });
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
+</script>
+</body>
+</html>

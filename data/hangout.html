@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+	<link rel="stylesheet" type="text/css" href="../materialize/css/materialize.min.css">
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira|Saira+Extra+Condensed" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>TurTex</title>
+</head>
+<body>
+<div class="c_preloader">
+	<img src="../assets/img/logo.png" width="250px">
+</div>
+
+<nav>
+    <div class="nav-wrapper">
+	    <a href="#!" class="brand-logo left">
+	      Hangout
+	    </a>
+	    <ul id="nav-mobile" class="right">
+	        <li></li>
+	    	<li><a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-navicon"></i></a></li>
+	    </ul>
+    </div>
+	<ul id="slide-out" class="side-nav">
+	    <li><div class="user-view">
+	      <div class="background">
+	        <img src="../assets/img/5.jpg" width="100%" height="100%">
+	      </div>
+	      <a href="profile.html"><img class="circle" src="../assets/img/christian.jpg"></a>
+	      <a href="profile.html"><span class="white-text name"></span></a>
+	      <a href="profile.html"><span class="white-text email"></span></a>
+	    </div></li>
+	    <li><a href="settings.html"><i class="fa fa-cogs"></i> Settings</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="subheader"><i class="fa fa-history"></i> History</a></li>
+	    <li><a href="trips.html"><i class="fa fa-car"></i> Trip History</a></li>
+	    <li><a href="transactions.html"><i class="fa fa-money"></i> Transaction History</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="waves-effect" href="javascript:;" id="logout"><i class="fa fa-power-off"></i> Logout</a></li>
+	</ul>
+</nav>
+
+<div class="container">
+	<div class="row" id="hangouts"><!-- 
+		<div class="col s12 fixed-hangout">
+			<div class="input-field col s6">
+				<select>
+					<option value="Filter" selected="" disabled="">Filter</option>
+					<option value="Name">Name</option>
+					<option value="Location">Location</option>
+					<option value="Tickets">Tickets</option>
+				</select>
+			</div>
+			<div class="input-field col s6">
+				<input id="search" type="text" class="validate">
+				<label for="search">Search</label>
+			</div>
+		</div> -->
+		<!-- <div class="spacing"></div> -->
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s6">
+			<div class="card sticky-action">
+				<div class="card-image waves-effect waves-block waves-light">
+					<img class="activator" src="../assets/img/favicon.png">
+				</div>
+				<div class="card-content">
+					<span class="card-title activator grey-text text-darken-4">Climax<!-- <i class="material-icons right">more_vert</i> --></span>
+					<p><a href="#">Escape Club</a></p>
+				</div>
+				<div class="card-reveal">
+					<span class="card-title grey-text text-darken-4">Climax<!-- <i class="material-icons right">close</i></span> -->
+					<p>Venue: Lekki, Lagos</p>
+					<p>Time: 2.00pm</p>
+					<p>Tickets Being Sold: Yes</p>
+					<p>Regular - N2000; VIP - N5000</p>
+				</div>
+				<div class="card-action">
+					<a href="javascript:;" class="btn waves-effect waves-light">Checkout</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+    <script type="text/javascript" src="../cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="../assets/js/custom.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+<script type="text/javascript">
+	// $("#formX").on('submit', function(){
+ //        var formX = $(this);
+ //        console.log($(this).serialize())
+ //        var formXdata = new FormData(formX)
+ //        $.ajax({
+ //            url: "config/updatePhoto.php",
+ //            type: "POST",
+ //            data: formXdata,
+ //            cache: false,
+ //            processData: false,
+ //            contentType: false,
+ //            success: function(res) {
+ //                alert(res)
+ //            },
+ //            error: function(a,b,c) {
+ //                console.log(a)
+ //            }
+ //        })
+
+ //        return false
+ //    })
+</script>
+
+<script type="text/javascript">
+	// Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+  $(document).ready(function(){
+    $('ul.tabs').tabs()
+  });
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
+</script>
+</body>
+</html>

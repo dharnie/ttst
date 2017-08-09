@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Import materialize.css-->
+	<link rel="stylesheet" type="text/css" href="../materialize/css/materialize.min.css">
+    <!-- My Style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Saira|Saira+Extra+Condensed" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>TurTex</title>
+</head>
+<body>
+<div class="c_preloader">
+	<img src="../assets/img/logo.png" width="250px">
+</div>
+
+<nav class="nav-extended">
+    <div class="nav-wrapper">
+    	<a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-navicon"></i></a>
+      	<a href="#!" class="brand-logo">
+      		Transaction History
+      	</a>
+	    <ul id="nav-mobile" class="right">
+	        <li><a href="" onclick="goBack()"><i class="fa fa-times"></i></a></li>
+	    </ul>
+    </div>
+	<ul id="slide-out" class="side-nav">
+	    <li><div class="user-view">
+	      <div class="background">
+	        <img src="../assets/img/5.jpg" width="100%" height="100%">
+	      </div>
+	      <a href="#!user"><img class="circle" src="../assets/img/christian.jpg"></a>
+	      <a href="#!name"><span class="white-text name"></span></a>
+	      <a href="#!email"><span class="white-text email"></span></a>
+	    </div></li>
+	    <li><a href="settings.html"><i class="fa fa-cogs"></i> Settings</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="subheader"><i class="fa fa-history"></i> History</a></li>
+	    <li><a href="trips.html"><i class="fa fa-car"></i> Trip History</a></li>
+	    <li><a href="transactions.html"><i class="fa fa-money"></i> Transaction History</a></li>
+	    <li><div class="divider"></div></li>
+	    <li><a class="waves-effect" href="javascript:;" id="logout"><i class="fa fa-power-off"></i> Logout</a></li>
+	</ul>
+	<div class="nav-content">
+		<ul id="tabs-swipe-demo" class="tabs tabs-transparent">
+		    <li class="tab col s6"><a href="#dashboard" class="active"><i class="fa fa-car"></i></a></li>
+		    <li class="tab col s6"><a href="#order"><i class="fa fa-warning"></i></a></li>
+		  </ul>
+	</div>
+</nav>
+  
+
+  <div class="row">
+	  <div id="dashboard" class="col s12">
+	  	<table class="striped responsive-table">
+	  		<thead>
+	  			<tr>
+		  			<th>Transaction ID</th>
+		  			<th>Name</th>
+		  			<th>Starting Point</th>
+		  			<th>Destination</th>
+		  			<th>Time Elapsed</th>
+		  			<th>Amount</th>
+		  		</tr>
+	  		</thead>
+
+	  		<tbody>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>2hrs 45mins</td>
+	  				<td>N2850</td>
+	  			</tr>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>2hrs 45mins</td>
+	  				<td>N2850</td>
+	  			</tr>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>2hrs 45mins</td>
+	  				<td>N2850</td>
+	  			</tr>
+	  		</tbody>
+	  	</table>
+	  </div>
+	  <div id="order" class="col s12">
+	  	<table class="striped responsive-table">
+	  		<thead>
+	  			<tr>
+		  			<th>Trip ID</th>
+		  			<th>Name</th>
+		  			<th>Starting Point</th>
+		  			<th>Destination</th>
+		  			<th>Time Elapsed</th>
+		  			<th>Who Cancelled</th>
+		  			<th>When Cancelled</th>
+		  			<th>Reason Cancelled</th>
+		  		</tr>
+	  		</thead>
+
+	  		<tbody>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>Trip wasn't started</td>
+	  				<td>Driver</td>
+	  				<td>Before Trip</td>
+	  				<td>Driver did not show up</td>
+	  			</tr>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>Trip wasn't started</td>
+	  				<td>Driver</td>
+	  				<td>Before Trip</td>
+	  				<td>Driver did not show up</td>
+	  			</tr>
+	  			<tr>
+	  				<td>TOI12345</td>
+	  				<td>Miley Cyrus</td>
+	  				<td>Egbeda, Lagos</td>
+	  				<td>Ikeja, Lagos</td>
+	  				<td>Trip wasn't started</td>
+	  				<td>Driver</td>
+	  				<td>Before Trip</td>
+	  				<td>Driver did not show up</td>
+	  			</tr>
+	  		</tbody>
+	  	</table>
+	  </div>
+	</div>
+
+<script type="text/javascript" src="../cordova.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../assets/js/jquery-2.2.3.min.js"></script>
+<script type="text/javascript" src="../materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="../assets/js/custom.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+
+<script type="text/javascript">
+	// Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+  $(document).ready(function(){
+    $('ul.tabs').tabs()
+  });
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+  $('.modal').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+        alert("Ready");
+        console.log(modal, trigger);
+      },
+      complete: function() { alert('Closed'); } // Callback for Modal close
+    }
+  );
+</script>
+</body>
+</html>
